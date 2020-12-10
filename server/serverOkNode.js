@@ -138,21 +138,24 @@ app.get('/', (req, res) => {
 })
 
 app.post('/order', (req, res) => {
-  console.log(req.body)
-  console.log(req.body.order_date)
+  //console.log(req)
   const order_date = req.body.order_date
   const shipped_date = req.body.shipped_date
   const ship_name = req.body.ship_name
   const ship_city = req.body.ship_city
   const ship_zip_postal_code = req.body.ship_zip_postal_code
   const shipping_fee = req.body.shipping_fee
-  let payment_type = req.body.payment_type
+  const payment_type = req.body.payment_type
   const quantity = req.body.quantity
   const unit_price = req.body.unit_price
   const discount = req.body.discount
   const date_allocated = req.body.date_allocated
   console.log(
-    `long values ---> ${order_date} + ${payment_type} + ${discount} + ${quantity}`
+    'order_date, payment_type, discount, quantity ---> ',
+    order_date,
+    payment_type,
+    discount,
+    quantity
   )
 
   insertOrders(
