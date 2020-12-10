@@ -1,0 +1,77 @@
+<div class="mt-5">
+  <h3>Insert Order Form</h3>
+</div>
+
+<form [formGroup]="insertForm">
+  <div class="form-group">
+    <input
+      type="date"
+      class="form-control"
+      placeholder="order_date"
+      formControlName="order_date"
+    />
+    <input
+      type="date"
+      class="form-control"
+      placeholder="shipped_date"
+      formControlName="shipped_date"
+    />
+    <input
+      type="text"
+      class="form-control"
+      placeholder="ship_name"
+      formControlName="ship_name"
+    />
+    <input
+      type="text"
+      class="form-control"
+      placeholder="ship_city"
+      formControlName="ship_city"
+    />
+    <input
+      type="text"
+      class="form-control"
+      placeholder="ship_zip_postal_code"
+      formControlName="ship_zip_postal_code"
+    />
+    <input
+      type="text"
+      class="form-control"
+      placeholder="shipping_fee"
+      formControlName="shipping_fee"
+    />
+    <input
+      type="text"
+      class="form-control"
+      placeholder="payment_type"
+      formControlName="payment_type"
+    />
+    <input
+      type="text"
+      class="form-control"
+      placeholder="quantity"
+      formControlName="quantity"
+    />
+    <input
+      type="text"
+      class="form-control"
+      placeholder="unit_price"
+      formControlName="unit_price"
+    />
+    <input
+      type="text"
+      class="form-control"
+      placeholder="discount"
+      formControlName="discount"
+    />
+    <input
+      type="date"
+      class="form-control"
+      placeholder="date_allocated"
+      formControlName="date_allocated"
+    />
+  </div>
+  <button type="submit" class="btn btn-info" (click)="insertId()">
+    Submit
+  </button>
+</form>
